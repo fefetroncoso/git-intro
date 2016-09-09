@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fernando Troncoso</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=3.3"></script>	
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+</head>
+
+<body>
+<div id="header">
+	<div id="logo"><a href="#"><img src="images/logo.png"></a></div>
+	<ul id="main-menu">
+    	<li><a href="#about">Eu</a></li>
+        <li><a href="#experience">Experiência</a></li>
+        <li><a href="#work">Dados</a></li>
+        <li><a href="#connect">Contato</a></li>
+    </ul>
+</div>
+
+<div id="container">
+
+<!--Begin About Section-->
+    <div id="about">
+    	<h1>Fernando Troncoso - TIA 31639143</h1>
+        <ul id="top-social">
+        	<li><a href="https://www.facebook.com/FefeTroncoso" class="facebook">Facebook</a></li>
+            <li><a href="https://www.twitter.com/FefeTroncoso" class="twitter">Twitter</a></li>
+        </ul>
+        <div class="top-divider"></div>
+        <div class="content">
+        	<img src="https://scontent-grt2-1.xx.fbcdn.net/v/t1.0-9/934124_1145448865495558_7188245913897521161_n.jpg?oh=3be7f622ef3dd1d898c0c71a1ec778ad&oe=5878C5FD" style="width:25%""height:25%"/>
+            <h2>Meu nome é Fernando Troncoso e sou um programador e técnico de computação.</h2>
+            <p>Tenho 18 anos e curso Técnologia em análise e desenvolvimento de sistemas na Universidade Mackenzie.</p> 
+            <ul id="service-icons">
+            	<li class="services-design">Design</li>
+                <li class="services-mobile">Mobile</li>
+                <li class="services-film">Film</li>
+                <li class="services-photo">Photo</li>
+            </ul>
+        </div>
+    <div class="bottom-divider"></div> 
+    </div>
+<!--End About Section-->
+
+<!--Begin Experience Section-->   
+    <div id="experience">
+    	<h1>Experiência</h1>
+        <div class="top-divider"></div>
+        <div class="content">
+            <div class="col">
+            <h2>No trabalho:</h2>
+            <p>Comecei fazendo serviçoes de manutenção aos 14 anos, e depois inicei estágio em uma escola de Computação aos 16.</p>
+            </div>
+            
+            <div class="col col-mid">
+            <h2>O que eu faço:</h2>
+            <p>Programação Python e Java, html, web-mobile, e montagem e manutenção de computadores</p>
+            </div>
+        </div>    
+        <div class="bottom-divider"></div>
+    </div>
+<!--End Experience Section-->
+
+<!--Begin Work Section-->  
+<div id="work">
+    	<h1>Dados</h1>
+        <div class="top-divider"></div>
+        	<div class="content">
+            	<p>Nome: Fernando da Silva Troncoso Rocha</p>
+            	<p>TIA: 31639143</p>
+            	<p>E-mail: fefetroncoso@live.com</p>
+            	<p>Cidade: São Paulo-SP</p>
+            	<p>Naturalidade: Santos-SP</p>
+            	<p>Contato profissional: (13)99739-4024</p>
+            	
+            </div>
+        <div class="bottom-divider"></div>
+    </div>
+<!--End Work Section-->
+
+<!--Begin Connect Section-->  
+    <div id="connect">
+    	<h1>Contato</h1>
+        <div class="top-divider"></div>
+        	<div class="content">
+            	<div id="form">
+                	<form action="#">
+                    	<span>Nome</span>
+                        <input type="text" name="name" class="name" />
+                        <span>E-mail</span>
+                        <input type="text" name="email" class="email"/>
+                        <span>Mensagem</span>
+                        <textarea class="message"></textarea>
+                        <input type="submit" name="submite" value="Submit" class="submit">
+                    </form>
+                </div>
+                <div id="social-footer">
+                	<h2>Siga-me:</h2>
+                    <p>Conheça minhas contas nas redes sociais:</p>
+                    <ul id="sm-links">
+                    	<li><a href="https://www.facebook.com/FefeTroncoso" class="facebook">Facebook</a></li>
+           				<li><a href="https://www.twitter.com/FefeTroncoso" class="twitter">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/FefeTroncoso" class="youtube">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+<!--End Connect Section--> 
+
+</div>
+
+ <!-- The JavaScript -->  
+        <script type="text/javascript">
+    		$(function() {
+                $('#main-menu li a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+
+                    event.preventDefault();
+                });
+            });
+			
+ 			 $(document).ready(function(){
+    		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false});
+  			});
+
+        </script>
+</body>
+</html>
